@@ -19,17 +19,15 @@ func _ready():
 
 func new_game_pressed():
 	var board=get_node("vertical/Board")
-	var width_node=get_node("vertical/header/subheader/cols")
-	var height_node=get_node("vertical/header/subheader/rows")
+	var width_node=get_node("vertical/header/cols")
+	var height_node=get_node("vertical/header/rows")
 	var bombs_node=get_node("vertical/header/bombs")
 	var width=width_node.get_text().to_int()
 	var height=height_node.get_text().to_int()
 	var bombs=bombs_node.get_text().to_int()
-	print ("before w, h, b=", width, " ", height, " ", bombs)
 	width=check_size(width, max_width, min_width)
 	height=check_size(height, max_height, min_height)
 	bombs=check_bombs(bombs, width, height)
-	print ("after w, h, b=", width, " ", height, " ", bombs)
 	board.new_game(width, height, bombs)
 	var board_width_pixels=width*32 ## TODO avoid this hack
 	var board_height_pixels=height*32 ## TODO avoid this hack
