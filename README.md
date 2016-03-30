@@ -17,3 +17,7 @@ It works basically like the original Minesweeper:
 ##Screenshots
 ![10x10 Screen](https://github.com/genete/Minehunter/blob/master/sreen_captures/Screen_capture_10x10x15.png)
 ![10x20 Screen](https://github.com/genete/Minehunter/blob/master/sreen_captures/Screen_capture_10x20x25.png)
+
+##License
+
+This project is fully free for you with no restrictions.
