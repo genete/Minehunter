@@ -15,5 +15,5 @@ It works basically like the original Minesweeper:
 * Improve style of text labels and text entries
 
 ##Screenshots
-!(https://github.com/genete/Minehunter/blob/master/sreen_captures/Screen_capture_10x10x15.png)
-!(https://github.com/genete/Minehunter/blob/master/sreen_captures/Screen_capture_10x20x25.png
+![10x10 Screen](https://github.com/genete/Minehunter/blob/master/sreen_captures/Screen_capture_10x10x15.png)
+![10x20 Screen](https://github.com/genete/Minehunter/blob/master/sreen_captures/Screen_capture_10x20x25.png)
