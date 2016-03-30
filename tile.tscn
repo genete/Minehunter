@@ -1,0 +1,110 @@
+[gd_scene load_steps=17 format=1]
+
+[ext_resource path="res://tile.gd" type="Script" id=1]
+[ext_resource path="res://images/32x32/closedtile.png" type="Texture" id=2]
+[ext_resource path="res://images/32x32/flag.png" type="Texture" id=3]
+[ext_resource path="res://images/32x32/question.png" type="Texture" id=4]
+[ext_resource path="res://images/32x32/opentile.png" type="Texture" id=5]
+[ext_resource path="res://images/32x32/red.png" type="Texture" id=6]
+[ext_resource path="res://images/32x32/bomb.png" type="Texture" id=7]
+[ext_resource path="res://images/32x32/misflagged.png" type="Texture" id=8]
+[ext_resource path="res://images/32x32/1.png" type="Texture" id=9]
+[ext_resource path="res://images/32x32/2.png" type="Texture" id=10]
+[ext_resource path="res://images/32x32/3.png" type="Texture" id=11]
+[ext_resource path="res://images/32x32/4.png" type="Texture" id=12]
+[ext_resource path="res://images/32x32/5.png" type="Texture" id=13]
+[ext_resource path="res://images/32x32/6.png" type="Texture" id=14]
+[ext_resource path="res://images/32x32/7.png" type="Texture" id=15]
+[ext_resource path="res://images/32x32/8.png" type="Texture" id=16]
+
+[node name="tile" type="Control"]
+
+margin/right = 32.0
+margin/bottom = 32.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"Script" }
+
+[node name="closed" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+centered = false
+
+[node name="flag" type="Sprite" parent="closed"]
+
+visibility/visible = false
+texture = ExtResource( 3 )
+centered = false
+
+[node name="question" type="Sprite" parent="closed"]
+
+visibility/visible = false
+texture = ExtResource( 4 )
+centered = false
+
+[node name="opened" type="Sprite" parent="."]
+
+visibility/visible = false
+texture = ExtResource( 5 )
+centered = false
+
+[node name="exploded" type="Sprite" parent="opened"]
+
+texture = ExtResource( 6 )
+centered = false
+
+[node name="bomb" type="Sprite" parent="opened"]
+
+texture = ExtResource( 7 )
+centered = false
+
+[node name="misflagged" type="Sprite" parent="opened"]
+
+texture = ExtResource( 8 )
+centered = false
+
+[node name="1" type="Sprite" parent="opened"]
+
+texture = ExtResource( 9 )
+centered = false
+
+[node name="2" type="Sprite" parent="opened"]
+
+texture = ExtResource( 10 )
+centered = false
+
+[node name="3" type="Sprite" parent="opened"]
+
+texture = ExtResource( 11 )
+centered = false
+
+[node name="4" type="Sprite" parent="opened"]
+
+texture = ExtResource( 12 )
+centered = false
+
+[node name="5" type="Sprite" parent="opened"]
+
+texture = ExtResource( 13 )
+centered = false
+
+[node name="6" type="Sprite" parent="opened"]
+
+texture = ExtResource( 14 )
+centered = false
+region_rect = Rect2( 184, 18, 14, 19 )
+
+[node name="7" type="Sprite" parent="opened"]
+
+texture = ExtResource( 15 )
+centered = false
+
+[node name="8" type="Sprite" parent="opened"]
+
+texture = ExtResource( 16 )
+centered = false
+
+
