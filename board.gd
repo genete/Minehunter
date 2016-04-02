@@ -24,7 +24,6 @@ func _process(delta):
 	var correctly_flagged=get_tree().get_nodes_in_group("correctly_flagged")
 	if misflagged.empty() && correctly_flagged.size()==bombs:
 		game_win=true
-		game_over=true
 
 
 

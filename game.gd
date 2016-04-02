@@ -15,7 +15,19 @@ func _ready():
 	var node=get_node("vertical/header/new_game")
 	node.connect("pressed", self, "new_game_pressed")
 	new_game_pressed()
+	set_process(true)
 
+func _process(delta):
+	var board=get_node("vertical/Board")
+	if board.game_win:
+		var new_game=get_node("vertical/header/new_game")
+		var win=preload("res://images/32x32/facewin.png")
+		new_game.set_normal_texture(win)
+
+func number_tile_pressed():
+	var animation=get_node("vertical/header/new_game/new_game_player")
+	animation.play("surprise")
+	pass
 
 func new_game_pressed():
 	var board=get_node("vertical/Board")
@@ -29,6 +41,9 @@ func new_game_pressed():
 	height=check_size(height, max_height, min_height)
 	bombs=check_bombs(bombs, width, height)
 	board.new_game(width, height, bombs)
+	var new_game=get_node("vertical/header/new_game")
+	var smile=preload("res://images/32x32/smile.png")
+	new_game.set_normal_texture(smile)
 	var board_width_pixels=width*32 ## TODO avoid this hack
 	var board_height_pixels=height*32 ## TODO avoid this hack
 	set_size(Vector2(board_width_pixels, board_height_pixels))

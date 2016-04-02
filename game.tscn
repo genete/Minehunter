@@ -1,8 +1,20 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://images/32x32/smile.png" type="Texture" id=2]
-[ext_resource path="res://board.tscn" type="PackedScene" id=3]
+[ext_resource path="res://images/32x32/faceoh.png" type="Texture" id=3]
+[ext_resource path="res://board.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "surprise"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:textures/normal")
+tracks/0/interp = 1
+tracks/0/keys = { "cont":false, "times":FloatArray( 0, 0.05, 0.1 ), "transitions":FloatArray( 1, 1, 1 ), "values":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ] }
 
 [node name="Game" type="Control"]
 
@@ -12,6 +24,8 @@ margin/right = 984.0
 margin/bottom = 560.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
 script/script = ExtResource( 1 )
 
 [node name="vertical" type="VBoxContainer" parent="."]
@@ -22,6 +36,8 @@ margin/right = -296.0
 margin/bottom = 4.0
 focus/ignore_mouse = false
 focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
 alignment = 0
 
 [node name="header" type="HBoxContainer" parent="vertical"]
@@ -30,6 +46,8 @@ margin/right = 336.0
 margin/bottom = 32.0
 focus/ignore_mouse = false
 focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
 alignment = 0
 
 [node name="new_game" type="TextureButton" parent="vertical/header"]
@@ -38,8 +56,21 @@ margin/right = 32.0
 margin/bottom = 32.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
 toggle_mode = false
 textures/normal = ExtResource( 2 )
+
+[node name="new_game_player" type="AnimationPlayer" parent="vertical/header/new_game"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/surprise = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
 [node name="rows_label" type="Label" parent="vertical/header"]
 
@@ -49,6 +80,7 @@ margin/right = 73.0
 margin/bottom = 22.0
 focus/ignore_mouse = true
 focus/stop_mouse = true
+size_flags/horizontal = 2
 text = "ROWS"
 valign = 1
 percent_visible = 1.0
@@ -58,11 +90,13 @@ max_lines_visible = -1
 [node name="rows" type="LineEdit" parent="vertical/header"]
 
 margin/left = 77.0
-margin/top = 4.0
-margin/right = 123.0
-margin/bottom = 27.0
+margin/right = 117.0
+margin/bottom = 32.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_constants/minimum_spaces = 10
 text = "10"
 max_length = 2
 editable = true
@@ -70,12 +104,13 @@ secret = false
 
 [node name="cols_label" type="Label" parent="vertical/header"]
 
-margin/left = 127.0
+margin/left = 121.0
 margin/top = 9.0
-margin/right = 188.0
+margin/right = 182.0
 margin/bottom = 22.0
 focus/ignore_mouse = true
 focus/stop_mouse = true
+size_flags/horizontal = 2
 text = "COLUMNS"
 percent_visible = 1.0
 lines_skipped = 0
@@ -83,12 +118,13 @@ max_lines_visible = -1
 
 [node name="cols" type="LineEdit" parent="vertical/header"]
 
-margin/left = 192.0
-margin/top = 4.0
-margin/right = 238.0
-margin/bottom = 27.0
+margin/left = 186.0
+margin/right = 232.0
+margin/bottom = 32.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
 text = "10"
 max_length = 2
 editable = true
@@ -96,12 +132,13 @@ secret = false
 
 [node name="bombs_label" type="Label" parent="vertical/header"]
 
-margin/left = 242.0
+margin/left = 236.0
 margin/top = 9.0
-margin/right = 286.0
+margin/right = 280.0
 margin/bottom = 22.0
 focus/ignore_mouse = true
 focus/stop_mouse = true
+size_flags/horizontal = 2
 custom_constants/shadow_offset_x = 0
 text = "BOMBS"
 valign = 1
@@ -111,18 +148,19 @@ max_lines_visible = -1
 
 [node name="bombs" type="LineEdit" parent="vertical/header"]
 
-margin/left = 290.0
-margin/top = 4.0
-margin/right = 336.0
-margin/bottom = 27.0
+margin/left = 284.0
+margin/right = 330.0
+margin/bottom = 32.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
 text = "15"
 max_length = 0
 editable = true
 secret = false
 
-[node name="Board" parent="vertical" instance=ExtResource( 3 )]
+[node name="Board" parent="vertical" instance=ExtResource( 4 )]
 
 margin/top = 36.0
 margin/right = 336.0

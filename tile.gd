@@ -89,9 +89,13 @@ func flagged_removed_at(var c, var r):
 ## Someone clicked a opened tile at c, r
 func opened_clicked_at(var c, var r):
 	if row==r && col==c:
+		#never reached because the tile clicked is now in opened group and 
+		# this call is only for closed. 
 		return
 	else:
 		if abs(row-r)<=1 && abs(col-c)<=1:
+			var game=get_node("/root/Game")
+			game.number_tile_pressed()
 			if bomb && sprite_flagged:
 				return
 			if sprite_closed:
@@ -121,7 +125,7 @@ func get_bombs_around():
 
 func _input_event(ev):
 	var parent=get_parent()
-	if parent.game_over:
+	if parent.game_over || parent.game_win:
 		return
 	if(ev.type==InputEvent.MOUSE_BUTTON and ev.pressed):
 		if (ev.button_index==BUTTON_LEFT):
