@@ -19,10 +19,13 @@ func _ready():
 
 func _process(delta):
 	var board=get_node("vertical/Board")
+	var new_game=get_node("vertical/header/new_game")
+	var win=preload("res://images/32x32/facewin.png")
+	var loose=preload("res://images/32x32/facedie.png")
 	if board.game_win:
-		var new_game=get_node("vertical/header/new_game")
-		var win=preload("res://images/32x32/facewin.png")
 		new_game.set_normal_texture(win)
+	if board.game_over:
+		new_game.set_normal_texture(loose)
 
 func number_tile_pressed():
 	var animation=get_node("vertical/header/new_game/new_game_player")
