@@ -6,6 +6,7 @@ var bombs=40
 var added_bombs=0
 var game_over=false
 var game_win=false
+var total_flags
 
 func _ready():
 	create_board()
@@ -22,6 +23,7 @@ func _process(delta):
 		game_over=true 
 	var misflagged=get_tree().get_nodes_in_group("misflagged")
 	var correctly_flagged=get_tree().get_nodes_in_group("correctly_flagged")
+	total_flags=misflagged.size()+correctly_flagged.size()
 	if misflagged.empty() && correctly_flagged.size()==bombs:
 		game_win=true
 

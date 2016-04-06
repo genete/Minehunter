@@ -1,0 +1,632 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Digit.gd" type="Script" id=1]
+[ext_resource path="res://dictionary.gd" type="Script" id=2]
+[ext_resource path="res://slot.gd" type="Script" id=3]
+[ext_resource path="res://led.png" type="Texture" id=4]
+
+[node name="Digit" type="GridContainer"]
+
+margin/right = 2400.0
+margin/bottom = 3360.0
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+custom_constants/vseparation = 480
+custom_constants/hseparation = 480
+columns = 5
+script/script = ExtResource( 1 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="dictionary" type="Node" parent="."]
+
+script/script = ExtResource( 2 )
+
+[node name="slot00" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot00"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot01" type="Control" parent="."]
+
+margin/left = 480.0
+margin/right = 480.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot01"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot02" type="Control" parent="."]
+
+margin/left = 960.0
+margin/right = 960.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot02"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot03" type="Control" parent="."]
+
+margin/left = 1440.0
+margin/right = 1440.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot03"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot04" type="Control" parent="."]
+
+margin/left = 1920.0
+margin/right = 1920.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot04"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot10" type="Control" parent="."]
+
+margin/top = 480.0
+margin/bottom = 480.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot10"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot11" type="Control" parent="."]
+
+margin/left = 480.0
+margin/top = 480.0
+margin/right = 480.0
+margin/bottom = 480.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot11"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot12" type="Control" parent="."]
+
+margin/left = 960.0
+margin/top = 480.0
+margin/right = 960.0
+margin/bottom = 480.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot12"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot13" type="Control" parent="."]
+
+margin/left = 1440.0
+margin/top = 480.0
+margin/right = 1440.0
+margin/bottom = 480.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot13"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot14" type="Control" parent="."]
+
+margin/left = 1920.0
+margin/top = 480.0
+margin/right = 1920.0
+margin/bottom = 480.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot14"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot20" type="Control" parent="."]
+
+margin/top = 960.0
+margin/bottom = 960.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot20"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot21" type="Control" parent="."]
+
+margin/left = 480.0
+margin/top = 960.0
+margin/right = 480.0
+margin/bottom = 960.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot21"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot22" type="Control" parent="."]
+
+margin/left = 960.0
+margin/top = 960.0
+margin/right = 960.0
+margin/bottom = 960.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot22"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot23" type="Control" parent="."]
+
+margin/left = 1440.0
+margin/top = 960.0
+margin/right = 1440.0
+margin/bottom = 960.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot23"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot24" type="Control" parent="."]
+
+margin/left = 1920.0
+margin/top = 960.0
+margin/right = 1920.0
+margin/bottom = 960.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot24"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot30" type="Control" parent="."]
+
+margin/top = 1440.0
+margin/bottom = 1440.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot30"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot31" type="Control" parent="."]
+
+margin/left = 480.0
+margin/top = 1440.0
+margin/right = 480.0
+margin/bottom = 1440.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot31"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot32" type="Control" parent="."]
+
+margin/left = 960.0
+margin/top = 1440.0
+margin/right = 960.0
+margin/bottom = 1440.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot32"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot33" type="Control" parent="."]
+
+margin/left = 1440.0
+margin/top = 1440.0
+margin/right = 1440.0
+margin/bottom = 1440.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot33"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot34" type="Control" parent="."]
+
+margin/left = 1920.0
+margin/top = 1440.0
+margin/right = 1920.0
+margin/bottom = 1440.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot34"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot40" type="Control" parent="."]
+
+margin/top = 1920.0
+margin/bottom = 1920.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot40"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot41" type="Control" parent="."]
+
+margin/left = 480.0
+margin/top = 1920.0
+margin/right = 480.0
+margin/bottom = 1920.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot41"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot42" type="Control" parent="."]
+
+margin/left = 960.0
+margin/top = 1920.0
+margin/right = 960.0
+margin/bottom = 1920.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot42"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot43" type="Control" parent="."]
+
+margin/left = 1440.0
+margin/top = 1920.0
+margin/right = 1440.0
+margin/bottom = 1920.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot43"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot44" type="Control" parent="."]
+
+margin/left = 1920.0
+margin/top = 1920.0
+margin/right = 1920.0
+margin/bottom = 1920.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot44"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot50" type="Control" parent="."]
+
+margin/top = 2400.0
+margin/bottom = 2400.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot50"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot51" type="Control" parent="."]
+
+margin/left = 480.0
+margin/top = 2400.0
+margin/right = 480.0
+margin/bottom = 2400.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot51"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot52" type="Control" parent="."]
+
+margin/left = 960.0
+margin/top = 2400.0
+margin/right = 960.0
+margin/bottom = 2400.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot52"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot53" type="Control" parent="."]
+
+margin/left = 1440.0
+margin/top = 2400.0
+margin/right = 1440.0
+margin/bottom = 2400.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot53"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot54" type="Control" parent="."]
+
+margin/left = 1920.0
+margin/top = 2400.0
+margin/right = 1920.0
+margin/bottom = 2400.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot54"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot60" type="Control" parent="."]
+
+margin/top = 2880.0
+margin/bottom = 2880.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot60"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot61" type="Control" parent="."]
+
+margin/left = 480.0
+margin/top = 2880.0
+margin/right = 480.0
+margin/bottom = 2880.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot61"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot62" type="Control" parent="."]
+
+margin/left = 960.0
+margin/top = 2880.0
+margin/right = 960.0
+margin/bottom = 2880.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot62"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot63" type="Control" parent="."]
+
+margin/left = 1440.0
+margin/top = 2880.0
+margin/right = 1440.0
+margin/bottom = 2880.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot63"]
+
+texture = ExtResource( 4 )
+centered = false
+
+[node name="slot64" type="Control" parent="."]
+
+margin/left = 1920.0
+margin/top = 2880.0
+margin/right = 1920.0
+margin/bottom = 2880.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 3 )
+__meta__ = { "_editor_collapsed":true }
+
+[node name="led" type="Sprite" parent="slot64"]
+
+texture = ExtResource( 4 )
+centered = false
+
+
